@@ -1,0 +1,15 @@
+{
+  "rewrites": [
+    { "source": "/cite-radieuse-podcast", "destination": "/cite-radieuse-podcast.html" },
+    { "source": "/mentions-legales", "destination": "/mentions-legales.html" },
+    { "source": "/politique-de-confidentialite", "destination": "/politique-de-confidentialite.html" }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ]
+}
