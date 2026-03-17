@@ -1,0 +1,30 @@
+[build]
+  publish = "."
+
+[[redirects]]
+  from = "/api/rss"
+  to = "https://feed.ausha.co/oRW46i5J5XxM"
+  status = 200
+  force = true
+
+[[redirects]]
+  from = "/cite-radieuse-podcast"
+  to = "/cite-radieuse-podcast.html"
+  status = 200
+
+[[redirects]]
+  from = "/mentions-legales"
+  to = "/mentions-legales.html"
+  status = 200
+
+[[redirects]]
+  from = "/politique-de-confidentialite"
+  to = "/politique-de-confidentialite.html"
+  status = 200
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Frame-Options = "SAMEORIGIN"
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"
