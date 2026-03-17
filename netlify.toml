@@ -4,7 +4,14 @@
   publish = "."
   functions = "netlify/functions"
 
-# Redirects — clean URLs
+# RSS PROXY — built-in Netlify reverse proxy, zero CORS
+[[redirects]]
+  from = "/api/rss"
+  to = "https://feed.ausha.co/oRW46i5J5XxM"
+  status = 200
+  force = true
+
+# Clean URLs
 [[redirects]]
   from = "/cite-radieuse-podcast"
   to = "/cite-radieuse-podcast.html"
@@ -20,7 +27,7 @@
   to = "/politique-de-confidentialite.html"
   status = 200
 
-# Headers — security & caching
+# Headers
 [[headers]]
   for = "/*"
   [headers.values]
@@ -37,3 +44,10 @@
   for = "/*.jpeg"
   [headers.values]
     Cache-Control = "public, max-age=2592000"
+```
+
+**Étape 2 — Modifier `cite-radieuse-podcast.html` sur GitHub**
+
+Cherche dans le fichier (Ctrl+F) cette ligne :
+```
+u=>`https://api.allorigins.win/get?url=${encodeURIComponent(u)}`,
