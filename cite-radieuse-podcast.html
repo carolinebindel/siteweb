@@ -830,8 +830,9 @@ const COVER = "data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAASABIAAD/4QCMRXhpZgAATU
 
 async function fetchRSS(){
   const urls=[
-    `https://api.allorigins.win/raw?url=${encodeURIComponent(RSS)}`,
+    `/api/rss`,
     `https://corsproxy.io/?${encodeURIComponent(RSS)}`,
+    `https://api.allorigins.win/raw?url=${encodeURIComponent(RSS)}`,
   ];
   for(const u of urls){
     try{
