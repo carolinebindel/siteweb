@@ -1,0 +1,615 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>La Gazette — Caroline Bindel · Lettres depuis Marseille</title>
+<meta name="description" content="Une lettre depuis Marseille. Portraits, coulisses du podcast, ce que la ville m'apprend. Par Caroline Bindel.">
+<link rel="canonical" href="https://carolinebindel.fr/gazette">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;0,900;1,400;1,700;1,900&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&family=Dancing+Script:wght@600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --navy:#2C3A5C;
+  --navy2:#3D4F72;
+  --rasp:#D94F6B;
+  --rasp2:#C03D58;
+  --blue:#4AABE0;
+  --blush:#F2D9D4;
+  --yellow:#F5C842;
+  --soft:#F8F4EF;
+  --soft2:#EEE8E0;
+  --ink:#1C2030;
+  --d1:rgba(28,32,48,.88);
+  --d2:rgba(28,32,48,.55);
+  --d3:rgba(28,32,48,.14);
+  --d4:rgba(28,32,48,.05);
+  /* Couleurs photo — rose sable du Vallon */
+  --sand:#E8C8B8;
+  --dusk:#B87868;
+}
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--soft);color:var(--ink);font-family:'DM Sans',sans-serif;font-weight:300;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none;-webkit-tap-highlight-color:transparent}
+body::after{content:'';position:fixed;inset:0;z-index:999;pointer-events:none;opacity:.022;background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 400 400' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.75' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");background-size:200px}
+
+/* STRIPE */
+.stripe{height:3px;display:flex;position:relative;z-index:3}
+.stripe s{flex:1;display:block}
+
+/* TOPNAV */
+.topnav{background:var(--navy);padding:.65rem 2rem;display:flex;align-items:center;justify-content:space-between;position:relative;z-index:3}
+.tn-logo{font-family:'Dancing Script',cursive;font-size:1.2rem;color:white}
+.tn-back{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.45);transition:color .2s;display:none}
+.tn-back:hover{color:var(--rasp)}
+
+/* NAV DESKTOP LINKS */
+.tn-links{display:flex;align-items:center;gap:1.8rem}
+.tn-link{font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;color:rgba(255,255,255,.5);transition:color .2s}
+.tn-link:hover{color:var(--rasp)}
+.tn-cta{
+  background:var(--rasp);color:white;
+  font-size:.6rem;letter-spacing:.18em;text-transform:uppercase;
+  padding:.45rem 1rem;transition:background .2s;
+}
+.tn-cta:hover{background:var(--rasp2)}
+
+/* BURGER */
+.burger{
+  display:none;
+  flex-direction:column;justify-content:center;align-items:center;
+  gap:4px;width:36px;height:36px;cursor:pointer;
+  background:none;border:none;padding:4px;
+  -webkit-tap-highlight-color:transparent;
+}
+.burger span{
+  display:block;width:20px;height:1.5px;background:white;
+  transition:transform .3s,opacity .3s,width .3s;
+}
+.burger.open span:nth-child(1){transform:translateY(5.5px) rotate(45deg)}
+.burger.open span:nth-child(2){opacity:0;width:0}
+.burger.open span:nth-child(3){transform:translateY(-5.5px) rotate(-45deg)}
+
+/* MENU MOBILE DRAWER */
+.nav-mob{
+  position:fixed;top:0;left:0;right:0;bottom:0;
+  background:var(--navy);z-index:100;
+  display:flex;flex-direction:column;justify-content:center;align-items:center;
+  gap:2rem;
+  transform:translateY(-100%);
+  transition:transform .4s cubic-bezier(.4,0,.2,1);
+  pointer-events:none;
+}
+.nav-mob.open{transform:translateY(0);pointer-events:all}
+.nav-mob-link{
+  font-family:'Playfair Display',serif;
+  font-size:1.8rem;font-style:italic;font-weight:700;
+  color:white;opacity:.7;transition:opacity .2s;
+  text-align:center;
+}
+.nav-mob-link:hover{opacity:1}
+.nav-mob-cta{
+  background:var(--rasp);color:white;
+  font-size:.7rem;letter-spacing:.2em;text-transform:uppercase;
+  padding:.7rem 2rem;margin-top:.5rem;transition:background .2s;
+}
+.nav-mob-cta:hover{background:var(--rasp2)}
+.nav-mob-back{
+  font-size:.58rem;letter-spacing:.18em;text-transform:uppercase;
+  color:rgba(255,255,255,.3);margin-top:1rem;
+}
+.nav-mob-close{
+  position:absolute;top:1rem;right:1.5rem;
+  background:none;border:none;cursor:pointer;
+  color:rgba(255,255,255,.5);font-size:1.5rem;
+  -webkit-tap-highlight-color:transparent;
+}
+
+@media(max-width:680px){
+  .tn-links{display:none}
+  .burger{display:flex}
+}
+
+/* ══ HERO PHOTO ══ */
+.hero{
+  position:relative;
+  min-height:100svh;
+  display:flex;flex-direction:column;
+  overflow:hidden;
+}
+.hero-photo{
+  position:absolute;inset:0;z-index:0;
+}
+.hero-photo img{
+  width:100%;height:100%;
+  object-fit:cover;
+  /* Cadrage : on veut l'eau et les enfants */
+  object-position:center 60%;
+  display:block;
+}
+/* Double overlay : préserver les couleurs chaudes de la photo
+   tout en rendant le texte lisible */
+.hero-photo::after{
+  content:'';position:absolute;inset:0;
+  background:
+    linear-gradient(to top,
+      rgba(28,20,16,.92) 0%,
+      rgba(28,20,16,.65) 30%,
+      rgba(28,20,16,.2) 60%,
+      rgba(28,20,16,.05) 100%
+    ),
+    linear-gradient(to right,
+      rgba(44,58,92,.4) 0%,
+      transparent 60%
+    );
+}
+
+/* Lueur chaude qui amplifie les tons de la photo */
+.hero-photo::before{
+  content:'';position:absolute;
+  bottom:0;left:0;right:0;height:50%;z-index:1;
+  background:linear-gradient(to top,
+    rgba(184,120,104,.25) 0%,
+    transparent 100%
+  );
+}
+
+/* Contenu hero */
+.hero-content{
+  position:relative;z-index:2;
+  flex:1;display:flex;flex-direction:column;
+  justify-content:flex-end;
+  padding:3rem 2.2rem 4rem;
+  max-width:820px;
+}
+
+.hero-numero{
+  font-size:.58rem;letter-spacing:.3em;text-transform:uppercase;
+  color:var(--sand);opacity:.7;margin-bottom:1rem;
+  display:flex;align-items:center;gap:.6rem;
+  animation:fadeDown .8s .05s ease both;
+}
+.hero-numero::before{content:'';width:24px;height:1px;background:var(--sand);opacity:.5}
+
+/* TITRE — joue avec la lumière dorée de la photo */
+.hero-title{
+  font-family:'Playfair Display',serif;
+  font-size:clamp(2.8rem,8vw,5rem);
+  font-weight:900;font-style:italic;
+  line-height:1;letter-spacing:-.02em;
+  color:white;
+  text-shadow:0 2px 40px rgba(0,0,0,.4);
+  margin-bottom:1rem;
+  animation:fadeDown .8s .1s ease both;
+}
+.hero-title em{
+  font-style:normal;
+  /* Couleur qui répond à la lumière dorée de la photo */
+  color:var(--sand);
+}
+
+/* Accroche courte — style lettre */
+.hero-accroche{
+  font-family:'Playfair Display',serif;
+  font-style:italic;
+  font-size:clamp(1rem,2.5vw,1.2rem);
+  line-height:1.75;
+  color:rgba(255,255,255,.7);
+  max-width:500px;
+  margin-bottom:2.2rem;
+  animation:fadeDown .8s .15s ease both;
+}
+
+/* Signature */
+.hero-sig{
+  display:flex;align-items:center;gap:.9rem;
+  animation:fadeDown .8s .2s ease both;
+}
+.hero-sig-avatar{
+  width:44px;height:44px;border-radius:50%;
+  object-fit:cover;object-position:center 10%;
+  border:2px solid rgba(232,200,184,.5);
+  flex-shrink:0;filter:sepia(.1);
+}
+.hero-sig-name{font-family:'Dancing Script',cursive;font-size:1.25rem;color:white;line-height:1.1}
+.hero-sig-role{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.4);margin-top:.05rem}
+
+/* Crédit photo */
+.photo-credit{
+  position:absolute;bottom:.6rem;right:.8rem;z-index:2;
+  font-size:.52rem;letter-spacing:.1em;
+  color:rgba(255,255,255,.3);
+}
+
+/* Scroll hint */
+.hero-scroll{
+  position:absolute;bottom:1.5rem;right:2rem;z-index:2;
+  display:flex;flex-direction:column;align-items:center;gap:.3rem;
+  font-size:.52rem;letter-spacing:.2em;text-transform:uppercase;
+  color:rgba(255,255,255,.3);cursor:pointer;transition:color .2s;
+  animation:fadeDown .8s .28s ease both;
+}
+.hero-scroll:hover{color:var(--sand)}
+.hero-scroll svg{animation:bob 2.5s ease-in-out infinite}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(4px)}}
+
+/* BANDE */
+.band{background:var(--rasp);padding:.6rem 2rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:.5rem;position:relative;z-index:2}
+.band-items{display:flex;align-items:center;gap:1.2rem;flex-wrap:wrap}
+.band-item{font-size:.58rem;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,.85);display:flex;align-items:center;gap:.35rem}
+.band-item::before{content:'✦';font-size:.4rem;opacity:.6}
+.band-item:first-child::before{display:none}
+.band-cta{font-family:'Playfair Display',serif;font-style:italic;font-size:.78rem;color:white;border-bottom:1px solid rgba(255,255,255,.4);cursor:pointer;transition:opacity .2s;white-space:nowrap;padding-bottom:.1rem}
+.band-cta:hover{opacity:.7}
+
+/* ══ SECTION EXTRAIT ══ */
+.extrait-section{background:white;border-top:1px solid var(--soft2)}
+.extrait-inner{max-width:920px;margin:0 auto;padding:5rem 2rem;display:grid;grid-template-columns:1fr;gap:4rem;animation:fadeUp .9s .1s ease both}
+@media(min-width:720px){.extrait-inner{grid-template-columns:3fr 2fr;align-items:start}}
+
+.section-tag{display:inline-flex;align-items:center;gap:.5rem;font-size:.55rem;letter-spacing:.25em;text-transform:uppercase;color:var(--rasp);margin-bottom:1rem}
+.section-tag::before{content:'';width:20px;height:2px;background:var(--rasp)}
+
+.extrait-titre{font-family:'Playfair Display',serif;font-size:clamp(1.5rem,4vw,2.2rem);font-weight:900;font-style:italic;line-height:1.12;color:var(--navy);margin-bottom:1.8rem;padding-bottom:1.2rem;border-bottom:2px solid var(--soft2)}
+
+.extrait-body{font-family:'Playfair Display',serif;font-size:1.05rem;line-height:1.92;color:var(--d1);margin-bottom:1.5rem}
+.extrait-body::first-letter{font-size:4.2rem;font-weight:900;line-height:.72;float:left;margin-right:.08em;margin-top:.07em;color:var(--rasp)}
+
+.phrase-choc{font-family:'Playfair Display',serif;font-size:1.18rem;font-style:italic;font-weight:700;color:var(--navy);line-height:1.5;margin:1.5rem 0;padding-left:1.2rem;border-left:3px solid var(--rasp)}
+
+.extrait-suite{font-size:.92rem;line-height:1.88;color:var(--d2);font-style:italic;font-family:'Playfair Display',serif}
+
+.questions{margin:1.8rem 0;padding:1.3rem 1.5rem;background:var(--soft);border-radius:4px}
+.questions p{font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;line-height:1.9;color:var(--navy2);opacity:.75}
+.questions p+p{margin-top:.3rem}
+
+.extrait-sign{margin-top:1.5rem;padding-top:1.2rem;border-top:1px solid var(--soft2);display:flex;align-items:center;justify-content:space-between}
+.extrait-sign-txt{font-family:'Dancing Script',cursive;font-size:1.3rem;color:var(--navy)}
+.extrait-badge{background:var(--soft);border:1px solid var(--soft2);padding:.3rem .7rem;font-size:.55rem;letter-spacing:.18em;text-transform:uppercase;color:var(--d2)}
+
+/* DROITE */
+/* Petite photo Marseille en encart */
+.portrait-col{}
+.marseille-card{
+  position:relative;overflow:hidden;margin-bottom:1.5rem;
+}
+.marseille-card img{
+  width:100%;
+  aspect-ratio:16/9;
+  object-fit:cover;
+  object-position:center 55%;
+  display:block;
+  filter:sepia(.08) saturate(1.1);
+}
+.marseille-card-caption{
+  position:absolute;bottom:0;left:0;right:0;
+  background:linear-gradient(to top,rgba(44,58,92,.85),transparent);
+  padding:.8rem 1rem;
+}
+.marseille-card-caption p{
+  font-family:'Playfair Display',serif;font-style:italic;
+  font-size:.78rem;color:rgba(255,255,255,.8);
+  line-height:1.4;
+}
+.marseille-card-credit{
+  font-size:.52rem;letter-spacing:.08em;
+  color:rgba(255,255,255,.4);margin-top:.2rem;
+  display:block;
+}
+
+.promesses{margin-top:1.5rem}
+.promesse{display:flex;gap:.8rem;align-items:flex-start;padding:.8rem 0;border-bottom:1px solid var(--soft2)}
+.promesse:last-child{border-bottom:none}
+.promesse-icon{width:32px;height:32px;border-radius:50%;background:var(--blush);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:.9rem}
+.promesse-body strong{display:block;font-family:'Playfair Display',serif;font-size:.92rem;font-weight:700;color:var(--navy);margin-bottom:.1rem}
+.promesse-body span{font-size:.72rem;color:var(--d2);line-height:1.5}
+
+/* ══ FORM ══ */
+.form-section{background:var(--navy);position:relative;overflow:hidden;animation:fadeUp .9s .2s ease both}
+.form-section::before{content:'';position:absolute;inset:0;background:radial-gradient(ellipse at 15% 50%,rgba(217,79,107,.14) 0%,transparent 55%),radial-gradient(ellipse at 85% 30%,rgba(74,171,224,.08) 0%,transparent 50%);pointer-events:none}
+
+/* Photo Marseille en fond très atténuée */
+.form-section::after{
+  content:'';position:absolute;inset:0;z-index:0;
+  background-size:cover;background-position:center 55%;
+  opacity:.07;
+  filter:grayscale(100%);
+}
+
+.form-inner{max-width:640px;margin:0 auto;padding:5rem 2rem;text-align:center;position:relative;z-index:1}
+.form-ornement{display:flex;justify-content:center;gap:2px;margin-bottom:2rem}
+.form-ornement span{width:24px;height:3px;display:block}
+.form-eyebrow{font-size:.6rem;letter-spacing:.28em;text-transform:uppercase;color:var(--rasp);margin-bottom:.8rem}
+.form-title{font-family:'Playfair Display',serif;font-size:clamp(1.8rem,6vw,3rem);font-weight:900;font-style:italic;line-height:1.05;color:white;margin-bottom:.5rem}
+.form-title em{color:var(--sand);font-style:normal}
+.form-desc{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;line-height:1.75;color:rgba(255,255,255,.5);max-width:420px;margin:1rem auto 2.5rem}
+.form-card-wrap{position:relative;max-width:480px;margin:0 auto}
+.form-card-wrap::before{content:'';position:absolute;inset:-12px;border-radius:10px;background:radial-gradient(ellipse,rgba(217,79,107,.2) 0%,transparent 65%);filter:blur(14px);pointer-events:none}
+.form-card{background:white;border-radius:8px;overflow:hidden;box-shadow:0 0 0 1px rgba(217,79,107,.25),0 20px 50px rgba(0,0,0,.45);position:relative;z-index:1}
+.form-card iframe{width:100%;display:block;border:none}
+.form-note{font-size:.6rem;color:rgba(255,255,255,.25);letter-spacing:.04em;margin-top:1.2rem}
+.form-note a{color:var(--rasp);text-decoration:underline;text-underline-offset:2px}
+
+/* ══ SOMMAIRE ══ */
+.sommaire-section{background:var(--soft);border-top:1px solid var(--soft2);animation:fadeUp .9s .25s ease both}
+.sommaire-inner{max-width:900px;margin:0 auto;padding:4rem 2rem}
+.sommaire-header{text-align:center;margin-bottom:3rem}
+.sommaire-title{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,4vw,2rem);font-weight:700;color:var(--navy);margin-bottom:.4rem}
+.sommaire-sub{font-family:'Playfair Display',serif;font-style:italic;font-size:.95rem;color:var(--d2)}
+.sommaire-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1.5rem}
+.som-card{background:white;padding:1.5rem 1.3rem;border-top:3px solid var(--rasp);box-shadow:0 2px 16px rgba(28,32,48,.06)}
+.som-card-num{font-family:'Playfair Display',serif;font-size:2.5rem;font-weight:900;font-style:italic;color:var(--blush);line-height:1;margin-bottom:.5rem;display:block}
+.som-card strong{display:block;font-family:'Playfair Display',serif;font-size:.95rem;font-weight:700;color:var(--navy);margin-bottom:.35rem}
+.som-card p{font-size:.73rem;color:var(--d2);line-height:1.6}
+.second-cta{text-align:center;margin-top:3rem;padding-top:2.5rem;border-top:1px solid var(--soft2)}
+.second-cta p{font-family:'Playfair Display',serif;font-style:italic;font-size:1rem;color:var(--d2);margin-bottom:1.2rem}
+.btn-sub{display:inline-block;background:var(--rasp);color:white;padding:.85rem 2.2rem;font-size:.72rem;letter-spacing:.18em;text-transform:uppercase;font-family:'DM Sans',sans-serif;font-weight:500;transition:background .2s,transform .2s;cursor:pointer;border:none}
+.btn-sub:hover{background:var(--rasp2);transform:translateY(-1px)}
+
+/* FOOTER */
+footer{background:var(--navy);border-top:1px solid rgba(255,255,255,.06);padding:2.5rem 2rem;text-align:center;animation:fadeUp .9s .3s ease both}
+.foot-logo{font-family:'Dancing Script',cursive;font-size:1.7rem;color:white;margin-bottom:.2rem}
+.foot-sub-text{font-family:'Playfair Display',serif;font-style:italic;font-size:.85rem;color:rgba(255,255,255,.4);margin-bottom:1.3rem}
+.foot-links{display:flex;flex-wrap:wrap;justify-content:center;gap:.3rem 1rem;margin-bottom:1rem}
+.foot-links a{font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;color:var(--rasp);transition:opacity .2s}
+.foot-links a:hover{opacity:.65}
+.foot-copy{font-size:.58rem;color:rgba(255,255,255,.22);letter-spacing:.08em}
+
+@keyframes fadeDown{from{opacity:0;transform:translateY(-14px)}to{opacity:1;transform:none}}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+
+@media(max-width:479px){
+  .hero-content{padding:2rem 1.4rem 3rem}
+  .hero-title{font-size:2.4rem;line-height:.95}
+  .hero-accroche{font-size:.95rem}
+  .extrait-inner{padding:2.5rem 1.2rem}
+  .form-inner{padding:3rem 1.2rem}
+  .sommaire-inner{padding:2.5rem 1.2rem}
+  footer{padding:2rem 1.2rem}
+  .topnav,.band{padding:.6rem 1.2rem}
+  .marseille-card img{aspect-ratio:4/3}
+  .som-card{padding:1.2rem 1rem}
+}
+@media(max-width:380px){
+  .hero-title{font-size:2rem}
+}
+@supports(padding:max(0px)){
+  footer{padding-bottom:max(2.5rem,calc(1.5rem + env(safe-area-inset-bottom)))}
+}
+</style>
+</head>
+<body>
+
+<nav class="topnav">
+  <a href="https://carolinebindel.fr" class="tn-logo">Caroline Bindel</a>
+  <!-- Liens desktop -->
+  <div class="tn-links">
+    <a href="#extrait-section" class="tn-link">L'édito</a>
+    <a href="https://carolinebindel.fr/cite-radieuse-podcast" class="tn-link">Le podcast</a>
+    <a href="https://carolinebindel.fr" class="tn-link">Site officiel</a>
+    <a href="#subscribe" class="tn-cta">S'abonner</a>
+  </div>
+  <!-- Burger mobile -->
+  <button class="burger" id="burger" aria-label="Menu" aria-expanded="false">
+    <span></span><span></span><span></span>
+  </button>
+</nav>
+
+<!-- MENU MOBILE -->
+<div class="nav-mob" id="nav-mob" aria-hidden="true">
+  <button class="nav-mob-close" id="nav-mob-close" aria-label="Fermer">✕</button>
+  <a href="#extrait-section" class="nav-mob-link" onclick="closeNav()">L'édito</a>
+  <a href="https://carolinebindel.fr/cite-radieuse-podcast" class="nav-mob-link" onclick="closeNav()">Cité Radieuse</a>
+  <a href="https://carolinebindel.fr/links" class="nav-mob-link" onclick="closeNav()">Tous les liens</a>
+  <a href="#subscribe" class="nav-mob-cta" onclick="closeNav()">S'abonner à La Gazette</a>
+  <a href="https://carolinebindel.fr" class="nav-mob-back" onclick="closeNav()">← carolinebindel.fr</a>
+</div>
+
+<div class="stripe">
+  <s style="background:#2C3A5C"></s>
+  <s style="background:#D94F6B"></s>
+  <s style="background:#4AABE0"></s>
+  <s style="background:#F5C842"></s>
+  <s style="background:#F2D9D4"></s>
+  <s style="background:#2C3A5C"></s>
+</div>
+
+<!-- HERO PHOTO MARSEILLE -->
+<section class="hero">
+  <div class="hero-photo">
+    <img src="https://raw.githubusercontent.com/carolinebindel/siteweb/main/vallon-auffes.jpg" alt="Vallon des Auffes, Marseille — © Mona Grid">
+  </div>
+
+  <div class="hero-content">
+    <div class="hero-numero">La Gazette · Newsletter gratuite</div>
+
+    <h1 class="hero-title">
+      Il y a des villes<br>que l'on n'oublie <em>jamais.</em>
+    </h1>
+
+    <p class="hero-accroche">
+      Une lettre écrite depuis le Sud — entre regard journalistique et récit intime, loin des algorithmes.
+    </p>
+
+    <div class="hero-sig">
+      <img class="hero-sig-avatar" src="https://raw.githubusercontent.com/carolinebindel/siteweb/main/caroline-bindel-about.jpg" alt="Caroline Bindel">
+      <div>
+        <div class="hero-sig-name">Caroline Bindel</div>
+        <div class="hero-sig-role">Journaliste · Présentatrice TV · Podcasteuse</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="photo-credit">© Mona Grid</div>
+
+  <div class="hero-scroll" onclick="document.querySelector('.extrait-section').scrollIntoView({behavior:'smooth'})">
+    <span>Lire d'abord</span>
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M12 5v14M5 12l7 7 7-7"/>
+    </svg>
+  </div>
+</section>
+
+<div class="band">
+  <div class="band-items">
+    <span class="band-item">Gratuit</span>
+    <span class="band-item">Podcast Cité Radieuse</span>
+    <span class="band-item">Portraits marseillais</span>
+    <span class="band-item">Depuis 2018</span>
+    <span class="band-item">Sans algorithme</span>
+  </div>
+  <span class="band-cta" onclick="document.querySelector('.form-section').scrollIntoView({behavior:'smooth'})">
+    S'abonner gratuitement →
+  </span>
+</div>
+
+<!-- EXTRAIT -->
+<section class="extrait-section">
+  <div class="extrait-inner">
+    <div>
+      <div class="section-tag">Extrait · Édition #07</div>
+      <h2 class="extrait-titre">JUL, ou ce qu'une ville dit d'elle-même quand elle chante</h2>
+      <p class="extrait-body">Il y a des villes qui ont leur écrivain. D'autres leur peintre. Marseille, elle, a son rappeur. Et pas n'importe lequel : le plus gros vendeur de disques de l'histoire du rap français. Un type qui ne s'est jamais expliqué, qui ne cherche pas la reconnaissance critique, qui fait de la musique pour sa ville et sa ville seulement. Pendant longtemps, j'ai cru que c'était simple. Que JUL était un phénomène, certes, mais un phénomène de surface.</p>
+      <div class="phrase-choc">Puis j'ai parlé avec Tarik Chakor.</div>
+      <p class="extrait-suite">Sociologue. Spécialiste de la culture populaire. Il m'a dit quelque chose que je n'arrive pas à oublier : « JUL ne documente pas Marseille. Il la rêve. Et les Marseillais se reconnaissent dans ce rêve parce qu'il ressemble à la ville qu'ils auraient voulu qu'on leur raconte. »</p>
+      <div class="questions">
+        <p>Qu'est-ce qu'une ville dit d'elle-même quand elle produit un tel artiste ?</p>
+        <p>Est-ce que la popularité est une forme d'intelligence collective ?</p>
+        <p>Et si l'art le plus marseillais n'était pas celui des galeries, mais celui des voitures qui passent fenêtres ouvertes en été ?</p>
+      </div>
+      <p class="extrait-suite">Je ne sais pas si JUL est un génie. Mais je sais que Marseille ne serait pas tout à fait elle-même sans lui. Et peut-être que c'est ça, finalement, la définition d'un artiste qui compte.</p>
+      <div class="extrait-sign">
+        <div class="extrait-sign-txt">Depuis Marseille, C.</div>
+        <div class="extrait-badge">Édition gratuite</div>
+      </div>
+    </div>
+
+    <div class="portrait-col">
+      <div class="marseille-card">
+        <img src="https://raw.githubusercontent.com/carolinebindel/siteweb/main/vallon-auffes-encart.jpg" alt="Vallon des Auffes, Marseille">
+        <div class="marseille-card-caption">
+          <p>Le Vallon des Auffes, un soir d'été.</p>
+          <span class="marseille-card-credit">© Mona Grid</span>
+        </div>
+      </div>
+
+      <div class="promesses">
+        <div class="promesse">
+          <div class="promesse-icon">🎙</div>
+          <div class="promesse-body">
+            <strong>Hors micro</strong>
+            <span>Les coulisses, les pensées entre les épisodes, ce que les conversations déclenchent</span>
+          </div>
+        </div>
+        <div class="promesse">
+          <div class="promesse-icon">🌊</div>
+          <div class="promesse-body">
+            <strong>Marseille comme personnage</strong>
+            <span>La ville avec ses humeurs, ses contradictions, sa lumière et son mistral</span>
+          </div>
+        </div>
+        <div class="promesse">
+          <div class="promesse-icon">✍️</div>
+          <div class="promesse-body">
+            <strong>Une voix journalistique</strong>
+            <span>Pas des conseils — un regard, une pensée, une invitation</span>
+          </div>
+        </div>
+        <div class="promesse">
+          <div class="promesse-icon">♡</div>
+          <div class="promesse-body">
+            <strong>La cartographie affective</strong>
+            <span>Livres, lieux, personnes — avec pourquoi, toujours</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FORM -->
+<section class="form-section">
+  <div class="form-inner">
+    <div class="form-ornement">
+      <span style="background:#2C3A5C"></span>
+      <span style="background:#D94F6B"></span>
+      <span style="background:#4AABE0"></span>
+      <span style="background:#F5C842"></span>
+      <span style="background:#F2D9D4"></span>
+    </div>
+    <div class="form-eyebrow">Abonnement gratuit · Sans engagement</div>
+    <h2 class="form-title">Votre boîte mail<br>mérite <em>le Sud.</em></h2>
+    <p class="form-desc">Rejoignez les lectrices et lecteurs qui reçoivent chaque édition — avec tout ce que cette ville inspire de beau, de vrai et d'inattendu.</p>
+    <div class="form-card-wrap">
+      <div class="form-card">
+        <iframe src="https://carolinebindel.substack.com/embed" height="160" frameborder="0" scrolling="no" title="S'abonner à La Gazette" loading="lazy"></iframe>
+      </div>
+    </div>
+    <p class="form-note">En vous inscrivant, vous acceptez notre <a href="https://carolinebindel.fr/politique-de-confidentialite">politique de confidentialité</a>. Désinscription libre en un clic.</p>
+  </div>
+</section>
+
+<!-- SOMMAIRE -->
+<section class="sommaire-section">
+  <div class="sommaire-inner">
+    <div class="sommaire-header">
+      <h2 class="sommaire-title">Ce qui vous attend dans chaque édition</h2>
+      <p class="sommaire-sub">Pas des rubriques. Des espaces de pensée.</p>
+    </div>
+    <div class="sommaire-grid">
+      <div class="som-card"><span class="som-card-num">I</span><strong>Coulisses du podcast</strong><p>Les rencontres, ce qu'elles déclenchent — les pensées qui naissent entre deux épisodes de Cité Radieuse</p></div>
+      <div class="som-card"><span class="som-card-num">II</span><strong>Marseille vivante</strong><p>Une scène, une personne, un lieu — la ville racontée de l'intérieur, avec ses contradictions et sa beauté brute</p></div>
+      <div class="som-card"><span class="som-card-num">III</span><strong>La cartographie affective</strong><p>Un livre, un restaurant, une expo, une chanson — avec une seule phrase sincère sur pourquoi</p></div>
+      <div class="som-card"><span class="som-card-num">IV</span><strong>La question laissée ouverte</strong><p>Une réflexion sans réponse. Le lecteur continue à penser après avoir refermé l'email</p></div>
+    </div>
+    <div class="second-cta">
+      <p>Gratuit. Sans publicité. Paraît quand l'inspiration souffle du large.</p>
+      <button class="btn-sub" onclick="document.querySelector('.form-section').scrollIntoView({behavior:'smooth'})">Recevoir La Gazette</button>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot-logo">La Gazette</div>
+  <div class="foot-sub-text">par Caroline Bindel · Depuis Marseille</div>
+  <div class="foot-links">
+    <a href="https://carolinebindel.fr">Site officiel</a>
+    <a href="https://carolinebindel.fr/cite-radieuse-podcast">Le Podcast</a>
+    <a href="https://carolinebindel.fr/links">Tous les liens</a>
+    <a href="https://carolinebindel.fr/#contact">Contact</a>
+    <a href="https://carolinebindel.fr/mentions-legales">Mentions légales</a>
+  </div>
+  <div class="foot-copy">© 2026 Caroline Bindel · Marseille</div>
+</footer>
+
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-7ZZVW9JG5D"></script>
+<script>window.dataLayer=window.dataLayer||[];function gtag(){dataLayer.push(arguments)}gtag('js',new Date());gtag('config','G-7ZZVW9JG5D');</script>
+
+<script>
+const burger = document.getElementById('burger');
+const navMob = document.getElementById('nav-mob');
+const navClose = document.getElementById('nav-mob-close');
+
+function openNav(){
+  burger.classList.add('open');
+  navMob.classList.add('open');
+  burger.setAttribute('aria-expanded','true');
+  navMob.setAttribute('aria-hidden','false');
+  document.body.style.overflow='hidden';
+}
+function closeNav(){
+  burger.classList.remove('open');
+  navMob.classList.remove('open');
+  burger.setAttribute('aria-expanded','false');
+  navMob.setAttribute('aria-hidden','true');
+  document.body.style.overflow='';
+}
+burger.addEventListener('click', () => navMob.classList.contains('open') ? closeNav() : openNav());
+navClose.addEventListener('click', closeNav);
+navMob.addEventListener('click', e => { if(e.target === navMob) closeNav(); });
+document.addEventListener('keydown', e => { if(e.key==='Escape') closeNav(); });
+</script>
+</body>
+</html>
