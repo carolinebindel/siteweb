@@ -1,0 +1,20 @@
+{
+  "rewrites": [
+    { "source": "/cite-radieuse-podcast", "destination": "/cite-radieuse-podcast.html" },
+    { "source": "/cite-radieuse", "destination": "/cite-radieuse-podcast.html" },
+    { "source": "/gazette-marseille", "destination": "/gazette-marseille.html" },
+    { "source": "/gazette", "destination": "/gazette-marseille.html" },
+    { "source": "/faq", "destination": "/faq.html" },
+    { "source": "/mentions-legales", "destination": "/mentions-legales.html" },
+    { "source": "/politique-de-confidentialite", "destination": "/politique-de-confidentialite.html" },
+    { "source": "/links", "destination": "/links.html" }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    }
+  ]
+}
