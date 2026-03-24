@@ -1,0 +1,671 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Caroline Bindel — Liens</title>
+<meta name="description" content="Tous les liens de Caroline Bindel — journaliste, présentatrice TV, podcasteuse à Marseille.">
+<meta name="robots" content="noindex">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://carolinebindel.fr/links">
+<meta property="og:title" content="Caroline Bindel — Liens">
+<meta property="og:description" content="Tous les liens de Caroline Bindel — journaliste, présentatrice TV, podcasteuse à Marseille.">
+<meta property="og:image" content="https://raw.githubusercontent.com/carolinebindel/siteweb/main/caroline-bindel-about.jpg">
+<meta property="og:locale" content="fr_FR">
+<meta property="og:site_name" content="Caroline Bindel">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Caroline Bindel — Liens">
+<meta name="twitter:description" content="Tous les liens de Caroline Bindel — journaliste, présentatrice TV, podcasteuse à Marseille.">
+<meta name="twitter:image" content="https://raw.githubusercontent.com/carolinebindel/siteweb/main/caroline-bindel-about.jpg">
+
+<!-- JSON-LD -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ProfilePage",
+  "name": "Caroline Bindel — Liens",
+  "description": "Tous les liens de Caroline Bindel — journaliste, présentatrice TV, podcasteuse à Marseille.",
+  "url": "https://carolinebindel.fr/links",
+  "inLanguage": "fr",
+  "mainEntity": {
+    "@type": "Person",
+    "name": "Caroline Bindel",
+    "url": "https://carolinebindel.fr",
+    "jobTitle": "Journaliste, présentatrice TV, podcasteuse",
+    "workLocation": { "@type": "Place", "name": "Marseille, France" },
+    "sameAs": [
+      "https://www.linkedin.com/in/caroline-bindel-83a400140/",
+      "https://www.instagram.com/carolinebindel/",
+      "https://x.com/CaroBindel",
+      "https://carolinebindel.substack.com/"
+    ]
+  }
+}
+</script>
+<link rel="icon" type="image/jpeg" href="https://raw.githubusercontent.com/carolinebindel/siteweb/main/caroline-bindel-about.jpg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600;700&family=Playfair+Display:ital,wght@0,700;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+:root {
+  --navy: #1a2235;
+  --navy2: #2C3A5C;
+  --coral: #E8705A;
+  --coral2: #D94F6B;
+  --sky: #4AABE0;
+  --sun: #F5C842;
+  --orange: #F47B2A;
+  --teal: #7ECEC4;
+  --cream: #FFF8F2;
+  --w: #ffffff;
+  --d1: rgba(255,248,242,.85);
+  --d2: rgba(255,248,242,.5);
+  --d3: rgba(255,248,242,.15);
+  --d4: rgba(255,248,242,.07);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+a { color: inherit; text-decoration: none; -webkit-tap-highlight-color: transparent; }
+button { -webkit-tap-highlight-color: transparent; }
+html { scroll-behavior: smooth; }
+
+body {
+  background: var(--navy);
+  color: var(--cream);
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 300;
+  min-height: 100vh;
+  min-height: -webkit-fill-available;
+  overflow-x: hidden;
+  position: relative;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* ── BACKGROUND ── */
+.bg-mesh {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  overflow: hidden;
+}
+.bg-mesh::before {
+  content: '';
+  position: absolute;
+  top: -20%;
+  left: -10%;
+  width: 70%;
+  height: 70%;
+  background: radial-gradient(ellipse, rgba(232,112,90,.18) 0%, transparent 65%);
+  animation: drift1 12s ease-in-out infinite alternate;
+}
+.bg-mesh::after {
+  content: '';
+  position: absolute;
+  bottom: -10%;
+  right: -10%;
+  width: 60%;
+  height: 60%;
+  background: radial-gradient(ellipse, rgba(74,171,224,.12) 0%, transparent 65%);
+  animation: drift2 15s ease-in-out infinite alternate;
+}
+.bg-grain {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+  opacity: .035;
+  background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+  background-size: 200px;
+}
+
+@keyframes drift1 { from { transform: translate(0,0) scale(1); } to { transform: translate(5%,8%) scale(1.1); } }
+@keyframes drift2 { from { transform: translate(0,0) scale(1); } to { transform: translate(-6%,-5%) scale(1.08); } }
+
+/* ── STRIPE ── */
+.stripe {
+  height: 3px;
+  width: 100%;
+  display: flex;
+  position: relative;
+  z-index: 2;
+}
+.stripe s { flex: 1; display: block; }
+
+/* ── LAYOUT ── */
+.wrap {
+  position: relative;
+  z-index: 1;
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 2rem 1.2rem 5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+/* ── AVATAR ── */
+.avatar-wrap {
+  position: relative;
+  margin-bottom: 1.5rem;
+  animation: fadeDown .7s ease both;
+}
+.avatar-ring {
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: conic-gradient(var(--coral), var(--sky), var(--sun), var(--coral2), var(--coral));
+  animation: spin 8s linear infinite;
+  filter: blur(2px);
+  opacity: .8;
+}
+@keyframes spin { to { transform: rotate(360deg); } }
+.avatar {
+  width: 96px;
+  height: 96px;
+  border-radius: 50%;
+  object-fit: cover;
+  object-position: center 15%;
+  display: block;
+  position: relative;
+  z-index: 1;
+  border: 3px solid var(--navy);
+}
+
+/* ── IDENTITY ── */
+.identity {
+  text-align: center;
+  animation: fadeDown .7s .1s ease both;
+}
+.script {
+  font-family: 'Dancing Script', cursive;
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--cream);
+  line-height: 1;
+  margin-bottom: .25rem;
+}
+.tagline {
+  font-size: .75rem;
+  letter-spacing: .18em;
+  text-transform: uppercase;
+  color: var(--d2);
+  margin-bottom: .5rem;
+}
+.city-pill {
+  display: inline-flex;
+  align-items: center;
+  gap: .35rem;
+  background: rgba(232,112,90,.12);
+  border: 1px solid rgba(232,112,90,.3);
+  border-radius: 20px;
+  padding: .25rem .75rem;
+  font-size: .68rem;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+  color: var(--coral);
+  margin-bottom: 2rem;
+}
+.city-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: var(--coral);
+  animation: blink 2s ease-in-out infinite;
+}
+@keyframes blink { 0%,100%{opacity:1} 50%{opacity:.2} }
+
+/* ── SECTIONS ── */
+.section {
+  width: 100%;
+  margin-bottom: 1.75rem;
+}
+.section-label {
+  font-size: .58rem;
+  font-weight: 500;
+  letter-spacing: .2em;
+  text-transform: uppercase;
+  color: var(--d2);
+  margin-bottom: .75rem;
+  display: flex;
+  align-items: center;
+  gap: .5rem;
+}
+.section-label::before {
+  content: '';
+  width: 20px;
+  height: 1px;
+  background: var(--coral);
+  flex-shrink: 0;
+}
+.section-label::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: var(--d4);
+}
+
+/* ── LINKS ── */
+.link-btn {
+  display: flex;
+  align-items: center;
+  gap: .9rem;
+  width: 100%;
+  padding: .85rem 1.1rem;
+  border-radius: 14px;
+  border: 1px solid var(--d3);
+  background: var(--d4);
+  color: var(--cream);
+  text-decoration: none;
+  font-family: 'DM Sans', sans-serif;
+  font-size: .88rem;
+  font-weight: 400;
+  transition: all .22s ease;
+  margin-bottom: .5rem;
+  position: relative;
+  overflow: hidden;
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+.link-btn::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  transition: opacity .22s;
+}
+.link-btn:hover {
+  transform: translateY(-2px);
+  border-color: transparent;
+  box-shadow: 0 8px 28px rgba(0,0,0,.3);
+}
+.link-btn:hover::before { opacity: 1; }
+.link-btn:active { transform: translateY(0); }
+
+.link-ico {
+  width: 38px;
+  height: 38px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.1rem;
+}
+.link-ico svg { width: 18px; height: 18px; fill: currentColor; }
+.link-text { flex: 1; line-height: 1.2; }
+.link-text small { display: block; font-size: .64rem; opacity: .5; margin-top: .1rem; }
+.link-arr {
+  font-size: .75rem;
+  opacity: .3;
+  transition: opacity .22s, transform .22s;
+}
+.link-btn:hover .link-arr { opacity: .8; transform: translateX(3px); }
+
+/* COULEURS PAR TYPE */
+.lk-site::before { background: linear-gradient(135deg, rgba(232,112,90,.25), rgba(217,79,107,.15)); }
+.lk-site .link-ico { background: rgba(232,112,90,.2); color: var(--coral); }
+.lk-site:hover { border-color: rgba(232,112,90,.4); }
+
+.lk-podcast::before { background: linear-gradient(135deg, rgba(74,171,224,.2), rgba(126,206,196,.12)); }
+.lk-podcast .link-ico { background: rgba(74,171,224,.18); color: var(--sky); }
+.lk-podcast:hover { border-color: rgba(74,171,224,.35); }
+
+.lk-gazette::before { background: linear-gradient(135deg, rgba(245,200,66,.18), rgba(244,123,42,.12)); }
+.lk-gazette .link-ico { background: rgba(245,200,66,.18); color: var(--sun); }
+.lk-gazette:hover { border-color: rgba(245,200,66,.3); }
+
+.lk-media::before { background: linear-gradient(135deg, rgba(126,206,196,.18), rgba(74,171,224,.12)); }
+.lk-media .link-ico { background: rgba(126,206,196,.18); color: var(--teal); }
+.lk-media:hover { border-color: rgba(126,206,196,.3); }
+
+.lk-contact::before { background: linear-gradient(135deg, rgba(217,79,107,.2), rgba(232,112,90,.12)); }
+.lk-contact .link-ico { background: rgba(217,79,107,.18); color: var(--coral2); }
+.lk-contact:hover { border-color: rgba(217,79,107,.35); }
+
+/* ── SOCIALS GRID ── */
+.socials {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: .5rem;
+  width: 100%;
+}
+.soc-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: .4rem;
+  padding: .8rem .5rem;
+  border-radius: 12px;
+  border: 1px solid var(--d3);
+  background: var(--d4);
+  color: var(--cream);
+  text-decoration: none;
+  font-size: .6rem;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+  font-family: 'DM Sans', sans-serif;
+  font-weight: 500;
+  transition: all .2s;
+  backdrop-filter: blur(8px);
+}
+.soc-btn svg { width: 20px; height: 20px; fill: currentColor; }
+.soc-btn:hover { transform: translateY(-2px); }
+
+.soc-ig { color: #E1306C; border-color: rgba(225,48,108,.3); background: rgba(225,48,108,.07); }
+.soc-ig:hover { background: rgba(225,48,108,.15); border-color: rgba(225,48,108,.5); }
+.soc-fb { color: #1877F2; border-color: rgba(24,119,242,.3); background: rgba(24,119,242,.07); }
+.soc-fb:hover { background: rgba(24,119,242,.15); border-color: rgba(24,119,242,.5); }
+.soc-x { color: var(--d1); border-color: var(--d3); }
+.soc-x:hover { background: var(--d3); }
+.soc-li { color: #0A66C2; border-color: rgba(10,102,194,.3); background: rgba(10,102,194,.07); }
+.soc-li:hover { background: rgba(10,102,194,.15); border-color: rgba(10,102,194,.5); }
+.soc-yt { color: #FF0000; border-color: rgba(255,0,0,.3); background: rgba(255,0,0,.07); }
+.soc-yt:hover { background: rgba(255,0,0,.15); border-color: rgba(255,0,0,.5); }
+.soc-sub { color: var(--orange); border-color: rgba(244,123,42,.3); background: rgba(244,123,42,.07); }
+.soc-sub:hover { background: rgba(244,123,42,.15); border-color: rgba(244,123,42,.5); }
+
+/* ── FOOTER ── */
+.foot {
+  margin-top: 1rem;
+  text-align: center;
+  font-size: .62rem;
+  color: var(--d2);
+  letter-spacing: .06em;
+  animation: fadeUp .7s .5s ease both;
+}
+.foot a { color: var(--coral); text-decoration: none; }
+
+/* ── ANIMATIONS ── */
+@supports(padding: max(0px)){
+  .wrap { padding-bottom: max(5rem, calc(3rem + env(safe-area-inset-bottom))); }
+  #pod-drawer { padding-bottom: max(3rem, calc(1.5rem + env(safe-area-inset-bottom))); }
+}
+@media(max-width:390px){
+  .script { font-size: 1.7rem; }
+  .socials { grid-template-columns: repeat(3,1fr); gap: .4rem; }
+  .soc-btn { padding: .7rem .3rem; font-size: .55rem; }
+  .link-btn { padding: .75rem .9rem; font-size: .83rem; }
+}
+
+@keyframes fadeDown {
+  from { opacity: 0; transform: translateY(-16px); }
+  to   { opacity: 1; transform: none; }
+}
+@keyframes fadeUp {
+  from { opacity: 0; transform: translateY(12px); }
+  to   { opacity: 1; transform: none; }
+}
+
+.section:nth-child(1) { animation: fadeUp .6s .15s ease both; }
+.section:nth-child(2) { animation: fadeUp .6s .25s ease both; }
+.section:nth-child(3) { animation: fadeUp .6s .35s ease both; }
+.section:nth-child(4) { animation: fadeUp .6s .45s ease both; }
+</style>
+</head>
+<body>
+
+<div class="stripe">
+  <s style="background:#2C3A5C"></s>
+  <s style="background:#E8705A"></s>
+  <s style="background:#4AABE0"></s>
+  <s style="background:#F47B2A"></s>
+  <s style="background:#F5C842"></s>
+  <s style="background:#7ECEC4"></s>
+</div>
+
+<div class="bg-mesh"></div>
+<div class="bg-grain"></div>
+
+<div class="wrap">
+
+  <!-- AVATAR -->
+  <div class="avatar-wrap">
+    <div class="avatar-ring"></div>
+    <img class="avatar" src="https://raw.githubusercontent.com/carolinebindel/siteweb/main/caroline-bindel-about.jpg" alt="Caroline Bindel">
+  </div>
+
+  <!-- IDENTITY -->
+  <div class="identity">
+    <div class="script">Caroline Bindel</div>
+    <div class="tagline">Journaliste · Présentatrice TV · Podcasteuse</div>
+    <div class="city-pill"><span class="city-dot"></span>Marseille</div>
+  </div>
+
+  <!-- SECTION 1 : SITE & UNIVERS -->
+  <div class="section">
+    <div class="section-label">Mon univers</div>
+
+    <a href="https://carolinebindel.fr" target="_blank" rel="noopener" class="link-btn lk-site">
+      <div class="link-ico">
+        <svg viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/></svg>
+      </div>
+      <div class="link-text">Site officiel<small>carolinebindel.fr</small></div>
+      <span class="link-arr">→</span>
+    </a>
+
+    <a href="https://carolinebindel.fr/cite-radieuse-podcast" target="_blank" rel="noopener" class="link-btn lk-podcast">
+      <div class="link-ico">
+        <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2H3v2a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12v-2h-2z"/></svg>
+      </div>
+      <div class="link-text">Cité Radieuse — Le Podcast<small>90+ portraits de Marseille · depuis 2018</small></div>
+      <span class="link-arr">→</span>
+    </a>
+
+    <a href="https://carolinebindel.fr/gazette" target="_blank" rel="noopener" class="link-btn lk-gazette">
+      <div class="link-ico">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>
+      </div>
+      <div class="link-text">La Gazette de Caroline<small>La newsletter · actus marseillaises & coulisses</small></div>
+      <span class="link-arr">→</span>
+    </a>
+  </div>
+
+  <!-- SECTION 2 : ÉCOUTER -->
+  <div class="section">
+    <div class="section-label">Écouter le podcast Cité Radieuse</div>
+
+    <a href="https://open.spotify.com/show/1K9AnkefADvFlZvbHl64xy" target="_blank" rel="noopener" class="link-btn" style="border-color:rgba(29,185,84,.25);background:rgba(29,185,84,.06);">
+      <div class="link-ico" style="background:rgba(29,185,84,.18);color:#1DB954;">
+        <svg viewBox="0 0 24 24"><path d="M12 0C5.4 0 0 5.4 0 12s5.4 12 12 12 12-5.4 12-12S18.66 0 12 0zm5.521 17.34c-.24.36-.66.48-1.021.24-2.82-1.74-6.36-2.1-10.561-1.14-.418.12-.779-.18-.899-.54-.12-.42.18-.78.54-.9 4.56-1.02 8.52-.6 11.64 1.32.42.18.479.66.301 1.02zm1.44-3.3c-.301.42-.841.6-1.262.3-3.239-1.98-8.159-2.58-11.939-1.38-.479.12-1.02-.12-1.14-.6-.12-.48.12-1.02.6-1.14C9.6 9.9 15 10.56 18.72 12.84c.361.18.54.78.241 1.2zm.12-3.36C15.24 8.4 8.82 8.16 5.16 9.3c-.6.18-1.2-.18-1.38-.72-.18-.6.18-1.2.72-1.38 4.26-1.26 11.28-1.02 15.721 1.62.539.3.719 1.02.419 1.56-.299.42-1.02.6-1.559.3z"/></svg>
+      </div>
+      <div class="link-text">Spotify<small>Écouter & s'abonner</small></div>
+      <span class="link-arr" style="color:#1DB954;">→</span>
+    </a>
+
+    <a href="https://podcasts.apple.com/fr/podcast/cit%C3%A9-radieuse-par-caroline-bindel/id1455831458" target="_blank" rel="noopener" class="link-btn" style="border-color:rgba(255,255,255,.12);background:rgba(255,255,255,.04);">
+      <div class="link-ico" style="background:rgba(255,255,255,.1);color:#fff;">
+        <svg viewBox="0 0 24 24"><path d="M12.152 6.896c-.948 0-2.415-1.078-3.96-1.04-2.04.027-3.91 1.183-4.961 3.014-2.117 3.675-.546 9.103 1.519 12.09 1.013 1.454 2.208 3.09 3.792 3.039 1.52-.065 2.09-.987 3.935-.987 1.831 0 2.35.987 3.96.948 1.637-.026 2.676-1.48 3.676-2.948 1.156-1.688 1.636-3.325 1.662-3.415-.039-.013-3.182-1.221-3.22-4.857-.026-3.04 2.48-4.494 2.597-4.559-1.429-2.09-3.623-2.324-4.39-2.376-2-.156-3.675 1.09-4.61 1.09z"/></svg>
+      </div>
+      <div class="link-text">Apple Podcasts<small>iPhone & Mac</small></div>
+      <span class="link-arr">→</span>
+    </a>
+
+    <a href="https://www.deezer.com/show/362432" target="_blank" rel="noopener" class="link-btn" style="border-color:rgba(255,0,146,.2);background:rgba(255,0,146,.05);">
+      <div class="link-ico" style="background:rgba(255,0,146,.15);color:#FF0092;">
+        <svg viewBox="0 0 24 24"><path d="M18.81 4.16v1.66H24V4.16h-5.19zM6.27 8.38v1.66h5.19V8.38H6.27zm6.27 0v1.66h5.19V8.38H12.54zm6.27 0v1.66H24V8.38h-5.19zM0 12.61v1.66h5.19V12.61H0zm6.27 0v1.66h5.19V12.61H6.27zm6.27 0v1.66h5.19V12.61H12.54zm6.27 0v1.66H24V12.61h-5.19zM0 16.83v1.66h5.19V16.83H0zm6.27 0v1.66h5.19V16.83H6.27zm6.27 0v1.66h5.19V16.83H12.54zm6.27 0v1.66H24V16.83h-5.19z"/></svg>
+      </div>
+      <div class="link-text">Deezer<small>Toutes plateformes</small></div>
+      <span class="link-arr" style="color:#FF0092;">→</span>
+    </a>
+  </div>
+
+  <!-- SECTION 3 : PRO -->
+  <div class="section">
+    <div class="section-label">Travailler ensemble</div>
+
+    <a href="https://carolinebindel.fr/#contact" target="_blank" rel="noopener" class="link-btn lk-contact">
+      <div class="link-ico">
+        <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 14H4V8l8 5 8-5v10zm-8-7L4 6h16l-8 5z"/></svg>
+      </div>
+      <div class="link-text">Me contacter<small>Projet, collaboration, interview…</small></div>
+      <span class="link-arr">→</span>
+    </a>
+
+    <!-- BOUTON AUTRES PODCASTS -->
+    <button onclick="openPodcasts()" class="link-btn lk-media" style="width:100%;text-align:left;cursor:pointer;">
+      <div class="link-ico">
+        <svg viewBox="0 0 24 24"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2H3v2a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12v-2h-2z"/></svg>
+      </div>
+      <div class="link-text">Autres productions podcast<small>Sextant, L'île aux ados, La mer est belle…</small></div>
+      <span class="link-arr">↓</span>
+    </button>
+  </div>
+
+  <!-- MODAL PODCASTS -->
+  <div id="pod-overlay" onclick="closePodcasts()" style="display:none;position:fixed;inset:0;background:rgba(0,0,0,.6);z-index:100;backdrop-filter:blur(4px);-webkit-backdrop-filter:blur(4px);"></div>
+  <div id="pod-drawer" style="display:none;position:fixed;bottom:0;left:50%;transform:translateX(-50%);width:100%;max-width:480px;background:#1e2d47;border-top:3px solid var(--coral);border-radius:20px 20px 0 0;z-index:101;padding:1.5rem 1.5rem 3rem;max-height:80vh;overflow-y:auto;">
+    <div style="display:flex;align-items:center;justify-content:space-between;margin-bottom:1.2rem;">
+      <div>
+        <div style="font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--cream);">Autres productions</div>
+        <div style="font-size:.65rem;color:var(--d2);letter-spacing:.1em;text-transform:uppercase;margin-top:.15rem;">Podcasts animés & produits par Caroline</div>
+      </div>
+      <button onclick="closePodcasts()" style="background:var(--d3);border:none;color:var(--cream);width:32px;height:32px;border-radius:50%;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;">✕</button>
+    </div>
+
+    <a href="https://podcasts.audiomeans.fr/sextant-bda3636b475e" target="_blank" rel="noopener" class="link-btn lk-podcast" style="margin-bottom:.5rem;">
+      <div class="link-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2H3v2a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12v-2h-2z"/></svg></div>
+      <div class="link-text">Sextant — La Provence<small>Podcast hebdo consacré à la mer</small></div>
+      <span class="link-arr">→</span>
+    </a>
+
+    <a href="https://instagram.com/la_reliance_label" target="_blank" rel="noopener" class="link-btn lk-podcast" style="margin-bottom:.5rem;">
+      <div class="link-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2H3v2a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12v-2h-2z"/></svg></div>
+      <div class="link-text">La Reliance<small>Label audio</small></div>
+      <span class="link-arr">→</span>
+    </a>
+
+    <a href="https://link.chtbl.com/Foucault-Podcast" target="_blank" rel="noopener" class="link-btn lk-podcast" style="margin-bottom:.5rem;">
+      <div class="link-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2H3v2a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12v-2h-2z"/></svg></div>
+      <div class="link-text">Foucault & Co<small>Production</small></div>
+      <span class="link-arr">→</span>
+    </a>
+
+    <a href="https://www.liguecancer13.net/actualites/podcast-cancer-oser-en-parler.html" target="_blank" rel="noopener" class="link-btn lk-podcast" style="margin-bottom:.5rem;">
+      <div class="link-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2H3v2a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12v-2h-2z"/></svg></div>
+      <div class="link-text">Cancer, oser en parler<small>Ligue contre le cancer — Bouches-du-Rhône</small></div>
+      <span class="link-arr">→</span>
+    </a>
+
+    <a href="https://www.cepacsilo-marseille.fr/le-podcast-du-cepac-silo/" target="_blank" rel="noopener" class="link-btn lk-podcast" style="margin-bottom:.5rem;">
+      <div class="link-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2H3v2a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12v-2h-2z"/></svg></div>
+      <div class="link-text">Le Podcast du Cepac Silo<small>Marseille</small></div>
+      <span class="link-arr">→</span>
+    </a>
+
+    <a href="https://instagram.com/les.bienveillantes_podcast" target="_blank" rel="noopener" class="link-btn lk-podcast" style="margin-bottom:.5rem;">
+      <div class="link-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2H3v2a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12v-2h-2z"/></svg></div>
+      <div class="link-text">Les Bienveillantes<small>Podcast</small></div>
+      <span class="link-arr">→</span>
+    </a>
+
+    <a href="https://podcast.ausha.co/parle-sud" target="_blank" rel="noopener" class="link-btn lk-podcast" style="margin-bottom:.5rem;">
+      <div class="link-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2H3v2a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12v-2h-2z"/></svg></div>
+      <div class="link-text">Parle Sud<small>Région Sud</small></div>
+      <span class="link-arr">→</span>
+    </a>
+
+    <a href="https://podcast.ausha.co/adolescence-rendez-vous-en-terre-inconnue-un-podcast-pour-parents-aventuriers" target="_blank" rel="noopener" class="link-btn lk-podcast" style="margin-bottom:.5rem;">
+      <div class="link-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2H3v2a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12v-2h-2z"/></svg></div>
+      <div class="link-text">L'île aux ados<small>Un podcast pour parents aventuriers</small></div>
+      <span class="link-arr">→</span>
+    </a>
+
+    <a href="https://podcast.ausha.co/la-mer-est-belle" target="_blank" rel="noopener" class="link-btn lk-podcast" style="margin-bottom:.5rem;">
+      <div class="link-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2H3v2a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12v-2h-2z"/></svg></div>
+      <div class="link-text">La mer est belle<small>Fait rayonner La Ciotat</small></div>
+      <span class="link-arr">→</span>
+    </a>
+
+    <a href="https://podcast.ausha.co/ne-pas-banaliser-l-immobilier/la-success-story-green-home-immobilier" target="_blank" rel="noopener" class="link-btn lk-podcast" style="margin-bottom:.5rem;">
+      <div class="link-ico"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 1a3 3 0 0 0-3 3v8a3 3 0 0 0 6 0V4a3 3 0 0 0-3-3zM19 10v2a7 7 0 0 1-14 0v-2H3v2a9 9 0 0 0 8 8.94V23h2v-2.06A9 9 0 0 0 21 12v-2h-2z"/></svg></div>
+      <div class="link-text">Green Home Immobilier<small>Podcast immobilier</small></div>
+      <span class="link-arr">→</span>
+    </a>
+  </div>
+
+  <script>
+    function openPodcasts(){
+      document.getElementById('pod-overlay').style.display='block';
+      document.getElementById('pod-drawer').style.display='block';
+      document.body.style.overflow='hidden';
+    }
+    function closePodcasts(){
+      document.getElementById('pod-overlay').style.display='none';
+      document.getElementById('pod-drawer').style.display='none';
+      document.body.style.overflow='';
+    }
+  </script>
+
+  <!-- SECTION 4 : RÉSEAUX PERSO -->
+  <div class="section">
+    <div class="section-label">Me suivre</div>
+    <div class="socials">
+
+      <a href="https://www.linkedin.com/in/caroline-bindel-83a400140/" target="_blank" rel="noopener" class="soc-btn soc-li">
+        <svg viewBox="0 0 24 24"><path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433c-1.144 0-2.063-.926-2.063-2.065 0-1.138.92-2.063 2.063-2.063 1.14 0 2.064.925 2.064 2.063 0 1.139-.925 2.065-2.064 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/></svg>
+        LinkedIn
+      </a>
+
+      <a href="https://www.instagram.com/carolinebindel/" target="_blank" rel="noopener" class="soc-btn soc-ig">
+        <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+        Instagram
+      </a>
+
+      <a href="https://x.com/CaroBindel" target="_blank" rel="noopener" class="soc-btn soc-x">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X / Twitter
+      </a>
+
+      <a href="https://carolinebindel.substack.com/" target="_blank" rel="noopener" class="soc-btn soc-sub" style="grid-column:1/-1;flex-direction:row;gap:.6rem;justify-content:center;padding:.7rem 1rem;">
+        <svg viewBox="0 0 24 24" style="width:16px;height:16px;"><path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/></svg>
+        La Gazette — Substack
+      </a>
+
+    </div>
+  </div>
+
+  <!-- SECTION 5 : RÉSEAUX PODCAST -->
+  <div class="section">
+    <div class="section-label" style="opacity:.6;">Suivre Cité Radieuse</div>
+    <div class="socials" style="opacity:.75;">
+
+      <a href="https://www.instagram.com/cite.radieuse.podcast/" target="_blank" rel="noopener" class="soc-btn soc-ig" style="font-size:.55rem;">
+        <svg viewBox="0 0 24 24"><path d="M7.8 2h8.4C19.4 2 22 4.6 22 7.8v8.4a5.8 5.8 0 0 1-5.8 5.8H7.8C4.6 22 2 19.4 2 16.2V7.8A5.8 5.8 0 0 1 7.8 2m-.2 2A3.6 3.6 0 0 0 4 7.6v8.8C4 18.39 5.61 20 7.6 20h8.8a3.6 3.6 0 0 0 3.6-3.6V7.6C20 5.61 18.39 4 16.4 4H7.6m9.65 1.5a1.25 1.25 0 0 1 1.25 1.25A1.25 1.25 0 0 1 17.25 8 1.25 1.25 0 0 1 16 6.75a1.25 1.25 0 0 1 1.25-1.25M12 7a5 5 0 0 1 5 5 5 5 0 0 1-5 5 5 5 0 0 1-5-5 5 5 0 0 1 5-5m0 2a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3z"/></svg>
+        Instagram
+      </a>
+
+      <a href="https://www.facebook.com/CaroBindel" target="_blank" rel="noopener" class="soc-btn soc-fb" style="font-size:.55rem;">
+        <svg viewBox="0 0 24 24"><path d="M12 2.04C6.5 2.04 2 6.53 2 12.06C2 17.06 5.66 21.21 10.44 21.96V14.96H7.9V12.06H10.44V9.85C10.44 7.34 11.93 5.96 14.22 5.96C15.31 5.96 16.45 6.15 16.45 6.15V8.62H15.19C13.95 8.62 13.56 9.39 13.56 10.18V12.06H16.34L15.89 14.96H13.56V21.96A10 10 0 0 0 22 12.06C22 6.53 17.5 2.04 12 2.04Z"/></svg>
+        Facebook
+      </a>
+
+      <a href="https://x.com/cite_radieuse" target="_blank" rel="noopener" class="soc-btn soc-x" style="font-size:.55rem;">
+        <svg viewBox="0 0 24 24"><path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.747l7.73-8.835L1.254 2.25H8.08l4.253 5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/></svg>
+        X Podcast
+      </a>
+
+    </div>
+  </div>
+
+  <div class="foot">
+    © 2026 Caroline Bindel · <a href="https://carolinebindel.fr">carolinebindel.fr</a>
+  </div>
+
+</div>
+
+<div class="stripe" style="position:fixed;bottom:0;left:0;right:0;z-index:10;">
+  <s style="background:#2C3A5C"></s>
+  <s style="background:#E8705A"></s>
+  <s style="background:#4AABE0"></s>
+  <s style="background:#F47B2A"></s>
+  <s style="background:#F5C842"></s>
+  <s style="background:#7ECEC4"></s>
+</div>
+
+</body>
+</html>
